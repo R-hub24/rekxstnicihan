@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ku" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>زانکۆی جیهان / سلێمانی - تۆمارکردن</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0b253a;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #081d2d;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #14b8a6;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-container img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+            border-radius: 50%;
+            background-color: #ffffff;
+            padding: 2px;
+        }
+
+        .university-title h1 {
+            font-size: 20px;
+            color: #14b8a6;
+            font-weight: bold;
+        }
+
+        .university-title p {
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 20px;
+        }
+
+        .login-card {
+            background-color: #0f2c44;
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            width: 100%;
+            max-width: 450px;
+            border-top: 4px solid #14b8a6;
+        }
+
+        .login-card h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #14b8a6;
+            font-size: 22px;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 13px;
+            color: #cbd5e1;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 9px 10px;
+            border: 1px solid #334155;
+            background-color: #0b253a;
+            color: #ffffff;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: #14b8a6;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 11px;
+            background-color: #14b8a6;
+            color: #0b253a;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .login-btn:hover {
+            background-color: #0d9488;
+            color: #ffffff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #081d2d;
+            font-size: 13px;
+            color: #64748b;
+            border-top: 1px solid #1e293b;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="download.png" alt="لۆگۆی زانکۆی جیهان">
+            <div class="university-title">
+                <h1>زانکۆی جیهان / سلێمانی</h1>
+                <p>Cihan University - Sulaimaniyah</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="login-card">
+            <h2>تۆمارکردنی زانیاری خوێندکار</h2>
+            <form id="dataForm">
+                <div class="form-group">
+                    <label for="name">ناوی تەواو (name)</label>
+                    <input type="text" id="name" placeholder="ناوی خۆت بنووسە" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">شار (city)</label>
+                    <input type="text" id="city" value="سلێمانی" required>
+                </div>
+                <div class="form-group">
+                    <label for="uni">زانکۆ یان پەیمانگا (uni)</label>
+                    <input type="text" id="uni" value="زانکۆی جیهان - سلێمانی" required>
+                </div>
+                <div class="form-group">
+                    <label for="kolej">کۆلێژ و بەش (kolej & besh)</label>
+                    <input type="text" id="kolej" placeholder="نموونە: زانستە کۆمپیوتەرییەکان - سۆفتوێر" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">ژمارە تەلەفۆن (phone)</label>
+                    <input type="tel" id="phone" placeholder="0770XXXXXXX" required>
+                </div>
+                <div class="form-group">
+                    <label for="grade">قۆناغ (grade)</label>
+                    <input type="text" id="grade" placeholder="نموونە: قۆناغی دووەم" required>
+                </div>
+                <button type="submit" id="submitBtn" class="login-btn">ناردنی زانیاری</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>هەموو مافەکان پارێزراون © 2026 - زانکۆی جیهان / سلێمانی</p>
+    </footer>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw2DldcFX4hihpl97SnxgPpV3vJh_08Chn2XG86sv_IvxZwIdBJYrrC9D3YPpge_up3/exec';
+        
+        const form = document.getElementById('dataForm');
+        const submitBtn = document.getElementById('submitBtn');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'تکایە چاوەڕێ بکە...';
+
+            const name = document.getElementById('name').value;
+            const city = document.getElementById('city').value;
+            const uni = document.getElementById('uni').value;
+            const kolej_besh = document.getElementById('kolej').value;
+            const phone = document.getElementById('phone').value;
+            const grade = document.getElementById('grade').value;
+
+            const fullURL = `${scriptURL}?name=${encodeURIComponent(name)}&city=${encodeURIComponent(city)}&uni=${encodeURIComponent(uni)}&kolej_besh=${encodeURIComponent(kolej_besh)}&phone=${encodeURIComponent(phone)}&grade=${encodeURIComponent(grade)}`;
+
+            fetch(fullURL, {
+                method: 'GET',
+                mode: 'no-cors'
+            })
+            .then(() => {
+                alert('پیرۆز بێت، زانیارییەکانت بە سەرکەوتوویی تۆمار کران!');
+                form.reset();
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'ناردنی زانیاری';
+            })
+            .catch(error => {
+                console.error('Error!', error);
+                alert('پیرۆز بێت، زانیارییەکانت بە سەرکەوتوویی تۆمار کران!');
+                form.reset();
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'ناردنی زانیاری';
+            });
+        });
+    </script>
+
+</body>
+</html>
